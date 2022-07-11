@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="container"></div>
+    <!-- You probably want to have the city IDs correspond to the weather API -->
+    <section class="cities">
+        <input type="search" name="search" id="search">
+        <button id="DC">Washington, DC</button>
+        <button id="NYC">New York City</button>
+        <button id="BER">Berlin</button>
+        <button id="TYO">Tokyo</button>
+        <button id="ADE">Adelaide</button>
+    </section>
+    <section id="cityToday">
+        <h2 id="currentCity">Berlin, Germany</h2>
+        <p id="currentCityDate">Monday, 11 July 222</p>
+        <div class="col">
+            <div class="col weather-feature">
+              Temperature: 
+            </div>
+            <div id="currentCityTemp" class="col">
+                29 &#8451;
+            </div>
+
+            <div class="col weather-feature">
+                Wind: 
+            </div>
+            <div id="currentCityWind" class="col">
+                  Sooooo windy
+            </div>
+
+            <div class="col weather-feature">
+                Humidity: 
+            </div>
+            <div id="currentCityHumidity" class="col">
+                  Super sweaty
+            </div>
+
+            <div  class="col weather-feature">
+                UV Index: 
+            </div>
+            <div id="currentCityUVI" class="col">
+                Green
+            </div>
+        </div>
+    </section>
+
+    <!-- Add the display box for 5 days of weather just like the above but create it dynamically -->
+    <section id="city5Day">
+    </section>
+
+    <footer>
+        <p>Coding Challenge #6 for ESMT Coding Boot Camp</p>
+        <p>Started on 11 July 2022; completed on DATE</p>
+        <p> View the <a href="https://github.com/tlcoles/06-Challenge-Weather-Dashboard">GitHub repo</a></p>
+    </footer>
+          <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
+          <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://kit.fontawesome.com/53330a4c0d.js" crossorigin="anonymous"></script>
+          <script src="./assets/js/script.js"></script>
+</body>
+</html>
