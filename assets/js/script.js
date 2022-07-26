@@ -22,11 +22,3 @@ var cityBtnValues =
     lon: "138.6006"
   }
 ];
-
-// TODO: Write initial functions
-function init() {
-    // initialization stuff here
-  }
-  
-//* Call initialization function
-  init();
