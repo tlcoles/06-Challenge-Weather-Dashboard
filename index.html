@@ -17,7 +17,12 @@
     <div id="container"></div>
     <!-- You probably want to have the city IDs correspond to the weather API -->
     <section id="cities-section" class="cities">
-        <input type="search" name="search" id="search"><br>
+        <form id="citySearch">
+        <div class="input-group input-group-rounded">
+            <input class="input-group-field" type="search">
+            <div class="input-group-button"><input type="submit" class="button secondary" value="Search"></div>
+          </div>
+        </form>        
         <button id="DC" class="button cities">Washington, DC</button>&emsp;
         <button id="NYC" class="button cities">New York City</button>&emsp;
         <button id="BER" class="button cities">Berlin</button>&emsp;
