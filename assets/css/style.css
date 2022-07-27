@@ -1,4 +1,12 @@
-
+:root {
+    --clear-blue: #cfedfd;
+    --sky-blue: #bfe6fb;
+    --cloud-gray: whitesmoke;
+    --dusk-blue: #81b1c9;
+    --horizon-blue: #55859f;
+    --night-blue: #115376;
+    --pitch-black: #000000; 
+}
 .cities
 .weather-feature
 #container
