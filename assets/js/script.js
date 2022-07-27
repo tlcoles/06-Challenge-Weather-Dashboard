@@ -95,7 +95,7 @@ var cityBtnValues =
   function showWeather( data ) {
     let celsiusTemp = Math.round(parseFloat(data.current.temp)-273.15);
     let fahrenheit = Math.round(((parseFloat(data.current.temp)-273.15)*1.8)+32); 
-
+    $("#currentCity").text(data.timezone);
     $("#currentCityTemp").html(celsiusTemp + " &deg;C");
     $("#currentCityWind").html(`<strong>Wind: </strong>`+ data.current.wind_speed);
     $("#currentCityHumidity").html(`<strong>Humidity: </strong>`+ data.current.humidity + "&percnt;");
