@@ -17,45 +17,23 @@
     <div id="container"></div>
     <!-- You probably want to have the city IDs correspond to the weather API -->
     <section id="cities-section" class="cities">
-        <input type="search" name="search" id="search">
-        <button id="DC" class="cities">Washington, DC</button>
-        <button id="NYC" class="cities">New York City</button>
-        <button id="BER" class="cities">Berlin</button>
-        <button id="TYO" class="cities">Tokyo</button>
-        <button id="ADE" class="cities">Adelaide</button>
+        <input type="search" name="search" id="search"><br>
+        <button id="DC" class="button cities">Washington, DC</button>&emsp;
+        <button id="NYC" class="button cities">New York City</button>&emsp;
+        <button id="BER" class="button cities">Berlin</button>&emsp;
+        <button id="TYO" class="button cities">Tokyo</button>&emsp;
+        <button id="ADE" class="button cities">Adelaide</button>&emsp;
     </section>
     <section id="cityToday">
-        <h2 id="currentCity">Berlin, Germany</h2>
-        <p id="currentCityDate">Monday, 11 July 222</p>
+        <p id="currentCityDateTime">Monday, 11 July 222</p>
+        <h2 id="currentCity"></h2>
+        <h2 id="currentCityTemp" class="col"></h2>
         <div class="col">
-            <div class="col weather-feature">
-              Temperature: 
-            </div>
-            <div id="currentCityTemp" class="col">
-                29 &#8451;
-            </div>
-
-            <div class="col weather-feature">
-                Wind: 
-            </div>
-            <div id="currentCityWind" class="col">
-                  Sooooo windy
-            </div>
-
-            <div class="col weather-feature">
-                Humidity: 
-            </div>
-            <div id="currentCityHumidity" class="col">
-                  Super sweaty
-            </div>
-
-            <div  class="col weather-feature">
-                UV Index: 
-            </div>
-            <div id="currentCityUVI" class="col">
-                Green
-            </div>
+            <div id="currentCityWind" class="col"></div>
+            <div id="currentCityHumidity" class="col"></div>
+            <div id="currentCityUVI" class="col"></div>
         </div>
+
     </section>
 
     <!-- Add the display box for 5 days of weather just like the above but create it dynamically -->
