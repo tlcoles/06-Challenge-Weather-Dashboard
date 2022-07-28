@@ -2,10 +2,10 @@
 const API_KEY = "bd04a337c9efdec64ce163c91978bf26";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/onecall?"
 const BASE_GEO_URL = "http://api.openweathermap.org/geo/1.0/direct?q"
-var lat;
-var lon;
+let lat;
+let lon;
 
-var cityBtnValues = 
+let cityBtnValues = 
 [
   { city: "Washington, DC, US",
     lat: "38.8951",
