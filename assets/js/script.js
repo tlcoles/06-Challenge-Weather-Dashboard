@@ -6,7 +6,7 @@ let lat;
 let lon;
 
 // Create UVI range values
-const low = [1,2]
+const low = [0,1,2]
 const mod = [3,4,5]
 const high = [6,7]
 const vhigh = [8,9,10]

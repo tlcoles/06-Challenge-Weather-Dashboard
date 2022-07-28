@@ -11,45 +11,45 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header>
-        <h1>Weather Dashboard</h1>
-    </header>
-    <div id="container"></div>
-    <!-- You probably want to have the city IDs correspond to the weather API -->
-    <section id="cities-section" class="cities">
+    <div class="holy-grail-grid">
+        <div class="holy-grail-header">
+            <h1>Weather Dashboard</h1>
+        </div>
+      
+<div id="cities-section" class="cities holy-grail-left">
         <form id="citySearch">
         <div class="input-group input-group-rounded">
             <input class="input-group-field" type="search">
             <div class="input-group-button"><input type="submit" class="button secondary" value="Search"></div>
-          </div>
+            </div>
         </form>        
         <button id="DC" class="button cities">Washington, DC</button>&emsp;
         <button id="NYC" class="button cities">New York City</button>&emsp;
         <button id="BER" class="button cities">Berlin</button>&emsp;
         <button id="TYO" class="button cities">Tokyo</button>&emsp;
         <button id="ADE" class="button cities">Adelaide</button>&emsp;
-    </section>
-    <section id="cityToday">
-        <p id="currentCityDateTime">FIX THIS DATE, TAMMI</p>
-        <h2 id="currentCity"></h2>
-        <h2 id="currentCityTemp" class="col"></h2>
-        <div class="col">
-            <div id="currentCityWind" class="col"></div>
-            <div id="currentCityHumidity" class="col"></div>
-            <div id="currentCityUVI" class="col"></div>
-        </div>
-
-    </section>
-
-    <!-- Add the display box for 5 days of weather just like the above but create it dynamically -->
-    <section id="city5Day">
-    </section>
-
-    <footer>
-        <p>Coding Challenge #6 for ESMT Coding Boot Camp</p>
-        <p>Started on 11 July 2022; completed on DATE</p>
-        <p> View the <a href="https://github.com/tlcoles/06-Challenge-Weather-Dashboard">GitHub repo</a></p>
-    </footer>
+</div>
+      
+<div  id="cityToday" class="holy-grail-middle">
+    <p id="currentCityDateTime">FIX THIS DATE, TAMMI</p>
+    <h2 id="currentCity"></h2>
+    <h2 id="currentCityTemp"></h2>
+    <div class="col">
+        <div id="currentCityWind"></div>
+        <div id="currentCityHumidity"></div>
+        <div id="currentCityUVI"></div>
+    </div>
+</div>
+      
+<div id="city5Day" class="holy-grail-right">
+    <h3>City 5-day</h3>
+</div>
+<div class="holy-grail-footer text-center">
+                <p>Coding Challenge #6 for ESMT Coding Boot Camp</p>
+                <p>Started on 11 July 2022; completed on DATE</p>
+                <p>View the <a href="https://github.com/tlcoles/06-Challenge-Weather-Dashboard">GitHub repo</a></p>
+</div>
+<!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
         <!-- Compressed JavaScript -->
