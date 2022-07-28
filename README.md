@@ -14,7 +14,8 @@ To be inserted later. Stay tuned ...
 * Learning and using OpenWeather API
 
 ## Gratitude 
-@bithackerdev for the example of [Fetch the Weather with OpenWeatherMap API and JavaScript](https://bithacker.dev/fetch-weather-openweathermap-api-javascript)
+* @bithackerdev for the example of [Fetch the Weather with OpenWeatherMap API and JavaScript](https://bithacker.dev/fetch-weather-openweathermap-api-javascript)
+* OpenUV Dev Console for [UV Index Levels & Colors](https://www.openuv.io/kb/uv-index-levels-colors)
 
 Contact 
 Tammi L. Coles (@tlcoles)  

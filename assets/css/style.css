@@ -5,7 +5,12 @@
     --dusk-blue: #81b1c9;
     --horizon-blue: #55859f;
     --night-blue: #115376;
-    --pitch-black: #000000; 
+    --pitch-black: #000000;
+    --low: #558B2F;
+    --mod: #F9A825;
+    --high: #EF6C00;
+    --vhigh: #B71C1C;
+    --extr: #6A1B9A;
 }
 
 /* Style the search field with Foundation example styling */
@@ -19,6 +24,32 @@
     font-size: 0.8rem;
   }
   
+/* Style UVI based on level */
+#colorme {
+  width: fit-content;
+  display: inline;
+  padding: 2px;
+}
+.lowUVI {
+  background-color: var(--low);
+  color: var(--cloud-gray);
+}
+.modUVI {
+  background-color: var(--mod);
+  color: var(--pitch-black);
+}
+.highUVI {
+  background-color: var(--high);
+  color: var(--pitch-black);
+}
+.vhighUVI {
+  background-color: var(--vhigh);
+  color: var(--cloud-gray);
+}
+.extrUVI {
+  background-color: var(--extr);
+  color: var(--cloud-gray);
+}
 
 .cities
 .weather-feature

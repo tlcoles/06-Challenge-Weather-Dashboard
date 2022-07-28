@@ -1,9 +1,17 @@
-//* Create base variables
+// Create base variables
 const API_KEY = "bd04a337c9efdec64ce163c91978bf26";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/onecall?"
 const BASE_GEO_URL = "http://api.openweathermap.org/geo/1.0/direct?q"
 let lat;
 let lon;
+
+// Create UVI range values
+const low = [1,2]
+const mod = [3,4,5]
+const high = [6,7]
+const vhigh = [8,9,10]
+const extr = [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+
 
 let cityBtnValues = 
 [
@@ -75,7 +83,9 @@ let cityBtnValues =
     // Call showWeather function
     .then(function(data) {
       console.log(data);
-      showWeather(data); 
+      let uvi = Math.round(data.current.uvi);
+      showWeather(data);
+      colorUVI (uvi);
     })
     .catch(function() {
       // catch any errors
@@ -99,8 +109,25 @@ let cityBtnValues =
     $("#currentCityTemp").html(celsiusTemp + " &deg;C");
     $("#currentCityWind").html(`<strong>Wind: </strong>`+ data.current.wind_speed);
     $("#currentCityHumidity").html(`<strong>Humidity: </strong>`+ data.current.humidity + "&percnt;");
-    $("#currentCityUVI").html(`<strong>UVI: </strong>`+ data.current.uvi);
+    $("#currentCityUVI").html(`<strong>UVI: </strong>` + `<div id="colorme" class="">` + data.current.uvi + `</div>`);
   }
+
+// Check the UVI value and change its color appropriately
+function colorUVI (uvi) {
+  if (low.includes(uvi)) {
+    $( "#colorme" ).last().addClass( "lowUVI" );
+  } else if (mod.includes(uvi)) {
+    $( "#colorme" ).last().addClass( "modUVI" );
+  } else if (high.includes(uvi)) {
+    $( "#colorme" ).last().addClass( "highUVI" );
+  }
+  else if (vhigh.includes(uvi)) {
+    $( "#colorme" ).last().addClass( "vhighUVI" );
+  }
+  else {
+    $( "#colorme" ).last().addClass( "extrUVI" );
+  }
+}
 
 //! OpenWeather data
 // data.lat
