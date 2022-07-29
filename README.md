@@ -11,7 +11,8 @@ To be inserted later. Stay tuned ...
 
 ## Special challenges
 * Applying Foundation CSS framework
-* Learning and using OpenWeather API
+* Learning and using OpenWeather API and Geocoding API
+* Placing and styling weather icons based on condition codes
 
 ## Gratitude 
 * @bithackerdev for the example of [Fetch the Weather with OpenWeatherMap API and JavaScript](https://bithacker.dev/fetch-weather-openweathermap-api-javascript)
