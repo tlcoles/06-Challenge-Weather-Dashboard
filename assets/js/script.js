@@ -105,12 +105,19 @@ let cityBtnValues =
   function showWeather( data ) {
     let celsiusTemp = Math.round(parseFloat(data.current.temp)-273.15);
     let fahrenheit = Math.round(((parseFloat(data.current.temp)-273.15)*1.8)+32); 
+    let iconURL = "https://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png"  // Display weather icon
+
     $("#currentCity").text(data.timezone);
+    $('.weatherIcon').attr('src', iconURL);
     $("#currentCityTemp").html(celsiusTemp + " &deg;C");
     $("#currentCityWind").html(`<strong>Wind: </strong>`+ data.current.wind_speed);
     $("#currentCityHumidity").html(`<strong>Humidity: </strong>`+ data.current.humidity + "&percnt;");
     $("#currentCityUVI").html(`<strong>UVI: </strong>` + `<div id="colorme" class="">` + data.current.uvi + `</div>`);
   }
+
+
+
+  
 
 // Check the UVI value and change its color appropriately
 function colorUVI (uvi) {

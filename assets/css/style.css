@@ -23,7 +23,22 @@
     border-radius: 0 5000px 5000px 0;
     font-size: 0.8rem;
   }
-  
+
+/* Place weather icon inline with temperature */
+.weatherIcon {
+  display: inline;
+  align-content: center;
+  margin: -15px 0px 0px -20px;
+}
+
+.temp {
+display: inline-block;
+height: 100px;
+margin: 0;
+padding: 0;
+}
+
+
 /* Style UVI based on level */
 #colorme {
   width: fit-content;
@@ -50,6 +65,8 @@
   background-color: var(--extr);
   color: var(--cloud-gray);
 }
+
+/* Style main dashboard with Foundation CSS Holy Grail Grid */
 
 .holy-grail-grid {
   display: -ms-grid;
