@@ -37,6 +37,13 @@ let cityBtnValues =
   }
 ];
 
+// Listen for button click and pass ID value
+
+$(".cities").click(function () {
+  let city = this.id;
+  cityFetch (city);
+});
+
 // Use Geocoding API to fetch city lat&lon data to pass to weatherFetch function
 
   function cityFetch (city) {
@@ -113,9 +120,6 @@ let cityBtnValues =
     $("#currentCityUVI").html(`<strong>UVI: </strong>` + `<div id="colorme" class="">` + data.current.uvi + `</div>`);
   }
 
-function showCity (cityName) { 
-
- }
 
   
 
