@@ -13,9 +13,23 @@
     --extr: #6A1B9A;
 }
 
+
+
+
 /* Style the search field with Foundation example styling */
+
+.button.primary {
+  background-color: var(--horizon-blue);
+  font-weight: bold;
+}
+
+div.input-group.input-group-rounded {
+  width: 300px;
+  height: 40px;
+}
+
 .input-group-rounded .input-group-field {
-    border-radius: 5000px 0 0 5000px;
+    border-radius: 50px 0 0 50px;
     padding-left: 1rem;
   }
   
@@ -23,6 +37,26 @@
     border-radius: 0 5000px 5000px 0;
     font-size: 0.8rem;
   }
+
+/* Style city buttons */
+
+.button.cities {
+  width: 290px;
+  height: 40px;
+  margin-bottom: 8px;
+  background-color: var(--horizon-blue);
+  font-weight: bold;
+}
+
+.button.cities:hover {
+  background-color: var(--night-blue);
+}
+
+.button.cities:active {
+  background-color: var(--cloud-gray);
+  color: var(--night-blue);
+  border: 1px solid var(--pitch-black);
+}
 
 /* Place weather icon inline with temperature */
 .weatherIcon {
@@ -43,7 +77,7 @@ padding: 0;
 #colorme {
   width: fit-content;
   display: inline;
-  padding: 2px;
+  padding: 2px 5px;
 }
 .lowUVI {
   background-color: var(--low);
