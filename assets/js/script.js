@@ -49,10 +49,10 @@ let cityBtnValues =
 
   // Pass the results to weatherFetch function
   .then(function (data) {
-    console.log(data); 
     let lat = data[0].lat;
     let lon = data[0].lon;
     weatherFetch( lat, lon ); 
+    $("#currentCity").text(data[0].name + ", " + data[0].state + ", " + data[0].country);
     })
 
     .catch(function() {
@@ -95,9 +95,7 @@ let cityBtnValues =
 // Execute fetch using default city (Berlin) on load
 
   window.onload = function() {
-    let lat = 52.5244;
-    let lon = 13.4105;
-    weatherFetch( lat, lon ); 
+    cityFetch ("Berlin")
   }
 
 // Show weather data on the page
@@ -107,7 +105,7 @@ let cityBtnValues =
     let fahrenheit = Math.round(((parseFloat(data.current.temp)-273.15)*1.8)+32); 
     let iconURL = "https://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png"  // Display weather icon
 
-    $("#currentCity").text(data.timezone);
+
     $('.weatherIcon').attr('src', iconURL);
     $("#currentCityTemp").html(celsiusTemp + " &deg;C");
     $("#currentCityWind").html(`<strong>Wind: </strong>`+ data.current.wind_speed);
@@ -115,7 +113,9 @@ let cityBtnValues =
     $("#currentCityUVI").html(`<strong>UVI: </strong>` + `<div id="colorme" class="">` + data.current.uvi + `</div>`);
   }
 
+function showCity (cityName) { 
 
+ }
 
   
 
