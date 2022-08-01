@@ -13,14 +13,14 @@ const vhigh = [8,9,10]
 const extr = [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
 
 
-//! Listen for city button click and pass ID value to cityFetch()
+// Listen for city button click and pass ID value to cityFetch()
 
 $(".cities").click(function () {
   let city = this.id;
   cityFetch (city);
 });
 
-//! Listen for search button click, grab input city value, and pass value to cityFetch()
+// Listen for search button click, grab input city value, and pass value to cityFetch()
 
 $("#citySearch").submit(function(event) {
   event.preventDefault();
@@ -30,7 +30,17 @@ $("#citySearch").submit(function(event) {
   cityFetch (city)
 })
 
-//! Use Geocoding API to fetch city lat&lon data to pass to weatherFetch function
+//! Display searched cities
+
+//! function displaySearched () {
+//!  const searchedCities = JSON.parse(localStorage.getItem("searched"))
+//!  searchedCities.forEach ((city) => {
+//!    $("#cityList").append(`<li>${city}</li>`)
+//!  } )
+//! }
+//! displaySearched()
+
+// Use Geocoding API to fetch city lat&lon data to pass to weatherFetch function
 
   function cityFetch (city) {
   fetch (`${BASE_GEO_URL}=${city}&limit=2&appid=${API_KEY}`)
@@ -56,9 +66,6 @@ $("#citySearch").submit(function(event) {
     })()
       searchedCities.push(data[0].name)
       localStorage.setItem('searched', JSON.stringify(searchedCities));
-
-  // Retrieve city names and display as list
-
 
 
     //Test to see whether to display a state or not
@@ -96,13 +103,13 @@ $("#citySearch").submit(function(event) {
     });
   }
 
-//! Execute fetch using default city (Berlin) on load
+// Execute fetch using default city (Berlin) on load
 
   window.onload = function() {
     cityFetch ("Berlin");
   }
 
-//! Show weather data on the page
+// Show weather data on the page
 
   function showWeather( data ) {
     let celsiusTemp = Math.round(parseFloat(data.current.temp)-273.15);
@@ -171,8 +178,7 @@ $("#citySearch").submit(function(event) {
 
   }
 
-
-//! Check the UVI value and change its color appropriately
+// Check the UVI value and change its color appropriately
 function colorUVI (uvi) {
   if (low.includes(uvi)) {
     $( "#colorme" ).last().addClass( "lowUVI" );
@@ -189,17 +195,17 @@ function colorUVI (uvi) {
   }
 }
 
-//! OpenWeather data
-// data.lat
-// data.lon
-// data.current.temp
-// data.timezone
-// data.current.wind_speed
-// data.current.humidity
-// data.current.weather[0].icon 
-// data.current.weather[0].main <- description e.g., "Clouds"
-// data.daily[i].temp <-- i = 1 to 7; 0 is current day
-// data.daily[i].wind_speed
-// data.daily[i].humidity
-// data.daily[i].weather[0].icon
-// data.daily[i].weather[0].main
+//? OpenWeather data
+//? data.lat
+//? data.lon
+//? data.current.temp
+//? data.timezone
+//? data.current.wind_speed
+//? data.current.humidity
+//? data.current.weather[0].icon 
+//? data.current.weather[0].main <- description e.g., "Clouds"
+//? data.daily[i].temp <-- i = 1 to 7; 0 is current day
+//? data.daily[i].wind_speed
+//? data.daily[i].humidity
+//? data.daily[i].weather[0].icon
+//? data.daily[i].weather[0].main

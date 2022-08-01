@@ -13,10 +13,13 @@ To be inserted later. Stay tuned ...
 * Applying Foundation CSS framework
 * Learning and using OpenWeather API and Geocoding API
 * Placing and styling weather icons based on condition codes
+* localStorage.setItems and localStorage.getItems
 
 ## Gratitude 
 * @bithackerdev for the example of [Fetch the Weather with OpenWeatherMap API and JavaScript](https://bithacker.dev/fetch-weather-openweathermap-api-javascript)
 * OpenUV Dev Console for [UV Index Levels & Colors](https://www.openuv.io/kb/uv-index-levels-colors)
+* Marco Alka's thorough example for "[Store multiple objects with same name in localstorage using store.js](https://hashnode.com/post/store-multiple-objects-with-same-name-in-localstorage-using-storejs-cjuso20wv000pj5s18a88xo3w)"
+* Charllier Jr. for Grepper code "[How to convert javascript time to normal time](https://www.codegrepper.com/code-examples/javascript/how+to+convert+javascript+time+to+normal+time)"
 
 Contact 
 Tammi L. Coles (@tlcoles)  

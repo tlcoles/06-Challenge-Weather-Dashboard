@@ -19,7 +19,7 @@
 /* Style the search field with Foundation example styling */
 
 .button.primary {
-  background-color: var(--horizon-blue);
+  background-color: var(--night-blue);
   font-weight: bold;
 }
 
@@ -44,7 +44,7 @@ div.input-group.input-group-rounded {
   width: 290px;
   height: 40px;
   /* margin-bottom: 8px; */
-  background-color: var(--horizon-blue);
+  background-color: var(--night-blue);
   font-weight: bold;
 }
 
@@ -114,7 +114,7 @@ padding: 0;
       grid-template-columns: 1fr 3fr 1fr;
   -ms-grid-rows: 1fr 8fr 1fr;
       grid-template-rows: 1fr 8fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
   height: 100vh;
 }
 
@@ -164,7 +164,7 @@ padding: 0;
 }
 
 @media screen and (max-width: 60em) {
-  .right-nav {
+  .holy-grail-right {
     -ms-grid-row: 4;
         grid-row-start: 4;
     -ms-grid-column: 1;
