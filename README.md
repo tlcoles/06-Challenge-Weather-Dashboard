@@ -23,5 +23,5 @@ Requirements:
 
 Contact 
 Tammi L. Coles (@tlcoles)  
-URL of deployed application:  
+URL of deployed application: https://tlcoles.github.io/06-Challenge-Weather-Dashboard/  
 URL of GitHub repository: https://github.com/tlcoles/06-Challenge-Weather-Dashboard/  
