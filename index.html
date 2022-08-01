@@ -16,7 +16,8 @@
             <h1>Weather Dashboard</h1>
         </div>
       
-<div id="cities-section" class="cities holy-grail-left">
+<div id="cities-section" class="cities holy-grail-left grid-x">
+
         <h2>City search</h2>
         <form id="citySearch">
         <div class="input-group input-group-rounded">
@@ -29,10 +30,12 @@
         <button id="Berlin" class="button cities">Berlin</button>&emsp;
         <button id="Tokyo" class="button cities">Tokyo</button>&emsp;
         <button id="Adelaide" class="button cities">Adelaide</button>&emsp;
+
 </div>
       
-<div  id="cityToday" class="holy-grail-middle">
-    <p id="currentCityDateTime">FIX THIS DATE, TAMMI</p>
+<div  id="cityToday" class="holy-grail-middle grid-x">
+    <div class="cell">
+    <p id="currentCityDateTime"></p>
     <h2 id="currentCity"></h2>
     <img src="" class="weatherIcon"></img>
     <h2 id="currentCityTemp" class="temp"></h2>
@@ -41,6 +44,59 @@
         <div id="currentCityHumidity"></div>
         <div id="currentCityUVI"></div>
     </div>
+</div>
+<div class="grid-x">
+    <div class="cell forecast">
+        <img id="dayIcon1" src="" class="weatherIcon-small"></img>
+        <h2 id="dayTemp1"></h2>
+        <p id="fcDay1"></p>
+        <div class="col">
+            <div id="dayWind1" class=""></div>
+            <div id="dayHumidity1" class=""></div>
+            <div id="dayUVI1" class=""></div>
+        </div>
+    </div>
+    <div class="cell forecast">
+        <img id="dayIcon2" src="" class="weatherIcon-small"></img>
+        <h2 id="dayTemp2"></h2>
+        <p id="fcDay2"></p>
+        <div class="col">
+            <div id="dayWind2" class=""></div>
+            <div id="dayHumidity2" class=""></div>
+            <div id="dayUVI2" class=""></div>
+        </div>
+    </div>
+    <div class="cell forecast">
+        <img id="dayIcon3" src="" class="weatherIcon-small"></img>
+        <h2 id="dayTemp3"></h2>
+        <p id="fcDay3"></p>
+        <div class="col">
+            <div id="dayWind3" class=""></div>
+            <div id="dayHumidity3" class=""></div>
+            <div id="dayUVI3" class=""></div>
+        </div>
+    </div>
+    <div class="cell forecast">
+        <img id="dayIcon4" src="" class="weatherIcon-small"></img>
+        <h2 id="dayTemp4"></h2>
+        <p id="fcDay4"></p>
+        <div class="col">
+            <div id="dayWind4" class=""></div>
+            <div id="dayHumidity4" class=""></div>
+            <div id="dayUVI4" class=""></div>
+        </div>
+    </div>
+    <div class="cell forecast">
+        <img id="dayIcon5" src="" class="weatherIcon-small"></img>
+        <h2 id="dayTemp5"></h2>
+        <p id="fcDay5"></p>
+        <div class="col">
+            <div id="dayWind5" class=""></div>
+            <div id="dayHumidity5" class=""></div>
+            <div id="dayUVI5" class=""></div>
+        </div>
+    </div>
+</div>
 </div>
       
 <div id="city5Day" class="holy-grail-right">
