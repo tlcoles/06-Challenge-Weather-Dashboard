@@ -43,7 +43,7 @@ div.input-group.input-group-rounded {
 .button.cities {
   width: 290px;
   height: 40px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   background-color: var(--horizon-blue);
   font-weight: bold;
 }
@@ -63,6 +63,11 @@ div.input-group.input-group-rounded {
   display: inline;
   align-content: center;
   margin: -15px 0px 0px -20px;
+}
+.weatherIcon-small {
+  display: inline;
+  align-content: center;
+  /* margin: -15px 0px 0px -20px; */
 }
 
 .temp {
@@ -172,4 +177,14 @@ padding: 0;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
+}
+
+/* Style forecast sections */
+.forecast {
+  background-color: var(--night-blue);
+  color: var(--cloud-gray);
+  padding: 10px;
+  margin-bottom: 8px;
+  width: fit-content;
+  height: fit-content;
 }
