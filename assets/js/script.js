@@ -13,14 +13,24 @@ const vhigh = [8,9,10]
 const extr = [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
 
 
-// Listen for button click and pass ID value
+//! Listen for city button click and pass ID value to cityFetch()
 
 $(".cities").click(function () {
   let city = this.id;
   cityFetch (city);
 });
 
-// Use Geocoding API to fetch city lat&lon data to pass to weatherFetch function
+//! Listen for search button click, grab input city value, and pass value to cityFetch()
+
+$("#citySearch").submit(function(event) {
+  event.preventDefault();
+  let city = $(".input-group-field").val();
+  localStorage.setItem("city", city)
+  $("#currentCity").text(city);
+  cityFetch (city)
+})
+
+//! Use Geocoding API to fetch city lat&lon data to pass to weatherFetch function
 
   function cityFetch (city) {
   fetch (`${BASE_GEO_URL}=${city}&limit=2&appid=${API_KEY}`)
@@ -35,7 +45,28 @@ $(".cities").click(function () {
     let lat = data[0].lat;
     let lon = data[0].lon;
     weatherFetch( lat, lon ); 
-    $("#currentCity").text(data[0].name + ", " + data[0].state + ", " + data[0].country);
+
+  // Save searched city names in localStorage
+    const searchedCities = (() => {
+      const cityValue = localStorage.getItem("searched")
+      console.log(cityValue);
+      return cityValue === null
+        ? []
+        : JSON.parse(cityValue)
+    })()
+      searchedCities.push(data[0].name)
+      localStorage.setItem('searched', JSON.stringify(searchedCities));
+
+  // Retrieve city names and display as list
+
+
+
+    //Test to see whether to display a state or not
+    if (data[0].state != undefined) { 
+      $("#currentCity").text(data[0].name + ", " + data[0].state + ", " + data[0].country);
+    } else {
+      $("#currentCity").text(data[0].name + ", " + data[0].country);
+    }
     })
 
     .catch(function() {
@@ -43,17 +74,8 @@ $(".cities").click(function () {
     });
   }
 
-// Listen to submit click, grab input city value, and pass value to cityFetch function
 
-  $("#citySearch").submit(function(event) {
-    event.preventDefault();
-    let city = $(".input-group-field").val();
-    $("#currentCity").text(city);
-    cityFetch (city)
-  })
-
-
-// Use OpenWeather API to fetch weather using lat&lon and use showWeather function to display on page
+//! Use OpenWeather API to fetch weather using lat&lon and use showWeather function to display on page
 
   function weatherFetch (lat, lon) {
     fetch (`${BASE_URL}lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${API_KEY}`)
@@ -74,22 +96,20 @@ $(".cities").click(function () {
     });
   }
 
-// Execute fetch using default city (Berlin) on load
+//! Execute fetch using default city (Berlin) on load
 
   window.onload = function() {
     cityFetch ("Berlin");
   }
 
-// Show weather data on the page
+//! Show weather data on the page
 
   function showWeather( data ) {
     let celsiusTemp = Math.round(parseFloat(data.current.temp)-273.15);
     let fahrenheit = Math.round(((parseFloat(data.current.temp)-273.15)*1.8)+32); 
     let iconURL = "https://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png"  // Display weather icon
-    console.log(data);
     let unixTime = data.daily[0].dt;
     let date = new Date(unixTime*1000).toLocaleDateString("en-GB", {dateStyle: "full"});
-    console.log(date);
 
     $("#currentCityDateTime").text(date);
     $('.weatherIcon').attr('src', iconURL);
@@ -100,11 +120,8 @@ $(".cities").click(function () {
 
     let forecast5Day = [1,2,3,4,5];
     forecast5Day.forEach((i) => {
-      console.log(i);
-      forecast(i)
+    forecast(i)
     });
-    //! Reduce repetition with an forEach or a for loop
-
 
     function forecast(i) {
       let dayCelsius = Math.round(parseFloat(data.daily[i].temp.day)-273.15);
@@ -155,7 +172,7 @@ $(".cities").click(function () {
   }
 
 
-// Check the UVI value and change its color appropriately
+//! Check the UVI value and change its color appropriately
 function colorUVI (uvi) {
   if (low.includes(uvi)) {
     $( "#colorme" ).last().addClass( "lowUVI" );
