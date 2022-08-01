@@ -7,7 +7,7 @@ Requirements:
 
 ## Snapshot
 
-To be inserted later. Stay tuned ...
+![Weather Dashboard](/assets/images/220801-weather-dashboard-screenshot.png)
 
 ## Special challenges
 * Applying Foundation CSS framework
