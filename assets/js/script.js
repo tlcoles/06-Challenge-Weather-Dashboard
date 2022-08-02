@@ -1,7 +1,7 @@
 // Create base variables
 const API_KEY = "bd04a337c9efdec64ce163c91978bf26";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/onecall?"
-const BASE_GEO_URL = "http://api.openweathermap.org/geo/1.0/direct?q"
+const BASE_GEO_URL = "https://api.openweathermap.org/geo/1.0/direct?q"
 let lat;
 let lon;
 
